@@ -59,6 +59,16 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.20</version>
                 <configuration>
+                    <systemProperties>
+                        <property>
+                            <name>allure.results.directory</name>
+                            <value>${project.build.directory}/allure-results</value>
+                        </property>
+                        <property>
+                            <name>allure.results.directory</name>
+                            <value>E:\Extensions\jenkins\workspace\ArtThree\allure-results</value>
+                        </property>
+                    </systemProperties>
                     <suiteXmlFiles>
                         <suiteXmlFile>MyXml.xml</suiteXmlFile>
                     </suiteXmlFiles>
@@ -76,4 +86,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

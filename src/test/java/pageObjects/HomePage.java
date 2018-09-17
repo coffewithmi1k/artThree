@@ -1,8 +1,13 @@
 package pageObjects;
 
+import io.qameta.allure.Epic;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+@Epic("Smoke tests")
 
 public class HomePage extends PageNavigator {
 
@@ -49,7 +54,7 @@ public SearchResultPage clickOnCategoryTheatre(){
 
     @Step("Click on Theatre category")
     public SearchResultPage clickEventWedding(){
-        driver.findElement(By.xpath("//a[@href='/search/result?theme=2']")).click();
+        driver.findElement(By.xpath("//a[@href='/search/result?theme=2' and @class='book-now']")).click();
         return new SearchResultPage(driver);
     }
 
